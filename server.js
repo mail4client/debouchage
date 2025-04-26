@@ -7,7 +7,11 @@ const path = require('path');
 const stripe = require('stripe')('sk_test_51RHi4lSD9MXPIidLGZIyyvbQOmUZc9BWrVNRon8ZzXEomfXkgIMhYb4zlTGzhQ23UvhzcLiwJuI5xxRDhlVCv6jS00Ngmsx6L0');
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://www.extrinnov.com",
+  methods: ["GET", "POST"],
+}));
+
 app.use(express.json());
 app.use(express.static('public')); // This will serve HTML files from /public
 
