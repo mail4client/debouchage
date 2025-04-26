@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* language dropdown */
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -142,44 +142,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-  // Initialize the map at a midpoint between Laval and Montreal
-  var map = L.map('map').setView([45.5542, -73.6399], 10);
+// Initialize the map at a midpoint between Laval and Montreal
+var map = L.map('map').setView([45.5542, -73.6399], 10);
 
-  // Add OpenStreetMap tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+// Add OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
+}).addTo(map);
 
-  // Add a marker at the location
-  L.marker([45.5542, -73.6399]).addTo(map);
-    // .bindPopup('Midpoint between Laval and Montreal')
-    // .openPopup();
+// Add a marker at the location
+L.marker([45.5542, -73.6399]).addTo(map);
+// .bindPopup('Midpoint between Laval and Montreal')
+// .openPopup();
 
-    /* change map icon */
-    function changeMapIcon(lang) {
-        const flagImg = document.getElementById("languageFlag");
-    
-        if (lang === "fr") {
-            flagImg.src = "assets/flags/fr.svg";
-        } else {
-            flagImg.src = "assets/flags/gb.svg";
-        }
-    
-        // existing translation logic...
+/* change map icon */
+function changeMapIcon(lang) {
+    const flagImg = document.getElementById("languageFlag");
+
+    if (lang === "fr") {
+        flagImg.src = "assets/flags/fr.svg";
+    } else {
+        flagImg.src = "assets/flags/gb.svg";
     }
-       
-/* stripe button checkout */
-const stripe = Stripe('pk_test_51RHi4lSD9MXPIidLtOBZ3iIbFPFT0s0eHxxvCnpu98tR4wyFhM2qehismkoOoKjazC4SUCVyGgxdyWJOuCGvWroJ00WzJe0TnN');
 
-function checkout(amount, plan) {
-  fetch('https://debouchagetest.onrender.com/create-checkout-session', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ amount, plan })
-  })
-  .then(res => res.json())
-  .then(data => stripe.redirectToCheckout({ sessionId: data.id }));
+    // existing translation logic...
 }
 
-
-
+/* stripe button checkout */
+const stripe = Stripe('pk_test_51RHi4lSD9MXPIidLtOBZ3iIbFPFT0s0eHxxvCnpu98tR4wyFhM2qehismkoOoKjazC4SUCVyGgxdyWJOuCGvWroJ00WzJe0TnN');
+function checkout(amount, plan) {
+    alert("amount: " + amount + " plan: " + plan);
+    fetch('https://debouchagetest.onrender.com/create-checkout-session', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ amount: amount })
+    })
+    .then((response) => response.json())
+    .then((session) => {
+      return stripe.redirectToCheckout({ sessionId: session.id });
+    })
+    .then((result) => {
+      if (result.error) {
+        alert(result.error.message);
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+  }
