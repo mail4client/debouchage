@@ -47,8 +47,8 @@ app.post("/create-checkout-session", async (req, res) => {
         quantity: 1,
       },
     ],
-    success_url: "https://www.extrinnov.com/Debouchage/public/success",
-    cancel_url: "https://www.extrinnov.com/Debouchage/public/cancel",
+    success_url: "https://debouchagetest.onrender.com/success",
+    cancel_url: "https://debouchagetest.onrender.com/cancel",
   });
 
   res.json({ url: session.url, id: session.id });  
@@ -60,3 +60,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+
