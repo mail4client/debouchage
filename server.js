@@ -6,9 +6,15 @@ const cors = require('cors');
 const path = require('path');
 const stripe = require('stripe')('sk_test_51RHi4lSD9MXPIidLGZIyyvbQOmUZc9BWrVNRon8ZzXEomfXkgIMhYb4zlTGzhQ23UvhzcLiwJuI5xxRDhlVCv6jS00Ngmsx6L0');
 
+// Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public')); // This will serve HTML files from /public
+
+// Routes
+app.get("/", (req, res) => {
+  res.send("Stripe backend is running!");
+});
 
 // This handles Stripe redirect
 app.get('/success', (req, res) => {
@@ -28,7 +34,7 @@ app.post("/create-checkout-session", async (req, res) => {
     line_items: [
       {
         price_data: {
-          currency: "cad", // or "cad" based on your region
+          currency: "cad", // or "usd" based on your region
           product_data: {
             name: `${plan} Subscription`
           },
@@ -41,11 +47,12 @@ app.post("/create-checkout-session", async (req, res) => {
     cancel_url: "https://www.extrinnov.com/Debouchage/public/cancel",
   });
 
-  res.json({ url: session.url });
-  const PORT = process.env.PORT || 3000;
+  res.json({ url: session.url });  
+});
+
+// Important: use process.env.PORT
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-});
-
