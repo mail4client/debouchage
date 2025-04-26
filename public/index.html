@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débouchage d'or - Best Plumbing Services in Montreal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+    <!-- Topbar with Contact Info -->
+    <div class="topbar" id="topbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> <a href="tel:+1234567890" class="mobile">(514) 424-8467</a>
+                <i class="fas fa-envelope"></i> <a href="mailto:info@example.com" class="email">enquiry@dbdor.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/debouchage-logo.png" alt="Logo" id="logo" class="img-fluid"
+                    style="height: 60px;">
+            </a>
+
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Hidden Google Translate Element -->
+            <div id="google_translate_element" style="display: none;"></div>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img id="languageFlag" src="assets/flags/gb.svg" alt="Language" width="20" class="me-1">
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item translate" data-lang="en" href="#"
+                                    onclick="changeMapIcon('en')">English</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item translate" data-lang="fr" href="#"
+                                    onclick="changeMapIcon('fr')">Français</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Social Links -->
+                <!-- <div class="ms-3">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Video -->
+    <header class="position-relative vh-100" style="background-color: #2c3e50;">
+        <!-- Video Container -->
+        <div class="video-container position-absolute w-100 h-100">
+            <video id="backgroundVideo" autoplay muted playsinline
+                class="video-fade position-absolute w-100 h-100 object-fit-cover">
+                <source id="videoSource" src="assets/videos/plumbing_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Overlay for better readability -->
+        <div class="position-absolute w-100 h-100"></div>
+
+        <!-- Hero Content -->
+        <div class="overlay">
+            <div class="text-box">
+                <h2>Welcome to Débouchage d'or</h2>
+                <p>With over 20 years' experience at your service, we'll take care of everything from emergency
+                    unblocking to drain installation. We provide top-notch services to our customers, ensuring quality
+                    and satisfaction.</p>
+                <a href="#about" class="btn btn-primary">+ LEARN MORE</a>
+            </div>
+        </div>
+        <div class="hero-text-box">Welcome to Débouchage d'Or</div>
+    </header>
+
+    <!-- About Section -->
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-lg-6 about-image">
+                    <img src="assets/images/about-us.jpg" alt="About Débouchage d'or" class="img-fluid">
+                </div> -->
+                <div class="col-lg-12 about-content">
+                    <h2 class="mobileH2">About <span>Débouchage d'or</span></h2>
+                    <p>
+                        At <strong>Débouchage d'or</strong>, we take pride in delivering top-quality plumbing and
+                        drainage solutions
+                        with a strong commitment to reliability and customer satisfaction.
+                        With years of experience in the industry, our team ensures that every service we offer meets the
+                        highest professional standards.
+                    </p>
+                    <h4 class="rounded-title"><i class="fas fa-thumbs-up text-primary"></i>
+                        <span>Our</span>&nbsp;Commitment
+                    </h4>
+                    <p>
+                        We are dedicated to <strong>fast, efficient, and long-lasting solutions</strong> for all your
+                        plumbing needs.
+                        Whether it's emergency drainage, regular maintenance, or specialized services, we ensure timely
+                        and professional assistance.
+                    </p>
+                    <h4 class="rounded-title"><i class="fas fa-clock text-primary"></i>&nbsp;Our Values</h4>
+                    <ul style="padding-left: 20px;">
+                        <li><strong><i class="fa fa-check text-success"></i>&nbsp;Reliability:</strong> Always there
+                            when you
+                            need us.</li>
+                        <li><strong><i class="fa fa-check text-success"></i>&nbsp;Quality Service:</strong> Using the
+                            best
+                            equipment & techniques.</li>
+                        <li><strong><i class="fa fa-check text-success"></i>&nbsp;Customer Satisfaction:</strong> Your
+                            comfort and convenience matter most.</li>
+                        <li><strong><i class="fa fa-check text-success"></i>&nbsp;Transparency:</strong> No hidden
+                            costs,
+                            only honest service.</li>
+                    </ul>
+                    <h4 class="rounded-title"><i class="fas fa-handshake text-primary"></i>&nbsp;Why Choose Us?</h4>
+                    <p>
+                        From residential plumbing to large-scale industrial drainage services, <strong>Débouchage
+                            d'or</strong> is
+                        your trusted partner. We are here to ensure a smooth and hassle-free experience every time.
+                    </p>
+                    <!-- <a href="about.html" class="btn btn-primary">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container content">
+            <div class="section-header text-center">
+                <h2>Our <span>Professional Services</span></h2>
+                <p>Expert solutions for all your plumbing and drainage needs.</p>
+            </div>
+            <div class="row">
+                <!-- Service Box 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-box">
+                        <div class="icon"><i class="fas fa-tools"></i></div>
+                        <h3>Emergency Drain Cleaning</h3>
+                        <p>Fast and efficient drain unclogging services available 24/7.</p>
+                    </div>
+                </div>
+                <!-- Service Box 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-box">
+                        <div class="icon"><i class="fas fa-water"></i></div>
+                        <h3>Hydro Jetting</h3>
+                        <p>High-pressure water jetting to clear stubborn blockages.</p>
+                    </div>
+                </div>
+                <!-- Service Box 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-box">
+                        <div class="icon"><i class="fas fa-house-damage"></i></div>
+                        <h3>Pipe Repair & Replacement</h3>
+                        <p>Expert repair and installation of durable, long-lasting pipes.</p>
+                    </div>
+                </div>
+                <!-- Service Box 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-box">
+                        <div class="icon"><i class="fas fa-city"></i></div>
+                        <h3>Residential & Commercial Drain</h3>
+                        <p>Professional drainage maintenance for residential, businesses and industries.</p>
+                    </div>
+                </div>
+                <!-- Service Box 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-box">
+                        <div class="icon"><i class="fas fa-shower"></i></div>
+                        <h3>Bathroom & Kitchen Plumbing</h3>
+                        <p>Efficient plumbing services to keep your home running smoothly.</p>
+                    </div>
+                </div>
+                <!-- Service Box 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-box">
+                        <div class="icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>Preventive Maintenance</h3>
+                        <p>Regular inspections and maintenance to avoid costly repairs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>We look forward to hearing from you!</h2>
+            <p>Reliable and professional plumbing solutions at your doorstep.</p>
+            <a href="#contact" class="cta-btn">Contact Us Now!</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <p class="testimonial-text">"Amazing service! Highly recommend to everyone!"</p>
+                        <p class="customer-name">- John Doe</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <p class="testimonial-text">"Great experience, very professional and efficient."</p>
+                        <p class="customer-name">- Sarah Lee</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <p class="testimonial-text">"The best service I have ever used. Thank you!"</p>
+                        <p class="customer-name">- David Smith</p>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <p class="testimonial-text">"Quick and reliable. Highly recommended!"</p>
+                        <p class="customer-name">- Emily Johnson</p>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <p class="testimonial-text">"Fantastic service, very friendly staff!"</p>
+                        <p class="customer-name">- Michael Brown</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="text-center mb-4">Pricing & <span>Video Assistance</span> </h2>
+            </div>
+            <!-- Video Assistance -->
+            <div class="card mb-5 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">💻 Video Calling Assistance – $14.99</h3>
+                    <p>Don’t want to wait after a plumber? Try resolving the issue yourself first and save money with
+                        our <strong>15-minute video call assistance</strong>.</p>
+                    <p><strong>Things to have on hand:</strong></p>
+                    <ul>
+                        <li>Pen & Paper</li>
+                        <li>Plunger</li>
+                        <li>Cloth</li>
+                    </ul>
+                    <p><strong>Call Platforms:</strong> FaceTime, Instagram, WhatsApp</p>
+                    <p>📩 Payment via E-transfer required before the session.</p>
+                    <p>🔧 We assist you live and guide you even if tools are missing, so you’re ready for later.</p>
+                    <p class="text-muted"><small><em>Note: This is an advisory service. Resolution is not
+                                guaranteed.</em></small></p>
+                </div>
+            </div>
+
+            <!-- Subscription Plans -->
+            <div class="section-header text-center">
+                <h2 class="text-center mb-4">Subscription <span>Plans</span></h2>
+            </div>
+            <div class="row g-4">
+
+                <!-- Bronze -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-start border-4 border-warning shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">🥉 Bronze</h4>
+                            <p>$21.99 (1 Address)<br>$26.99 (Up to 6 Units)</p>
+                            <ul>
+                                <li>Manual Drain Auger 25ft</li>
+                                <li>Toilet Auger</li>
+                                <li>3x Unblockings / Year</li>
+                                <li>1 Hour Labour Included</li>
+                                <li>Free Travel within 7km</li>
+                                <li>30% Off on Equipment</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 stripe-checkout-btn" onclick="checkout(2199, 'Bronze')">
+                                Subscribe Now
+                            </button>
+                            <p class="text-muted"><small>*Extra charge after 1hr or 7km. $30 flat for distance over 7km.
+                                    Missed appointments deduct a service.</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver -->
+                <div class="col-md-4 position-relative">
+                    <!-- Ribbon wrapper -->
+                    <div class="ribbon-wrapper">
+                        <div class="ribbon">Most Popular</div>
+                    </div>
+                    <div class="card h-100 border-start border-4 border-secondary shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">🥈 Silver</h4>
+                            <p>$27.99 (1 Address)<br>$37.99 (Up to 6 Units)</p>
+                            <ul>
+                                <li>Everything in Bronze + Powered Auger 35ft</li>
+                                <li>3x Unblockings / Year</li>
+                                <li>1 Hour Labour Included</li>
+                                <li>Free Travel within 14km</li>
+                                <li>40% Off on Equipment</li>
+                            </ul>
+                            <button class="btn btn-secondary w-100 stripe-checkout-btn" onclick="checkout(2799, 'Silver')">
+                                Subscribe Now
+                            </button>
+                            <p class="text-muted"><small>*Same conditions as Bronze, but with more tools and wider
+                                    coverage.</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-start border-4 border-warning-subtle shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">🥇 Gold</h4>
+                            <p>$37.99 (1 Address)<br>$52.99 (Up to 6 Units)</p>
+                            <ul>
+                                <li>All Silver Tools + Air Gun & Drum Auger 75ft</li>
+                                <li>Exterior Pipe Inspection</li>
+                                <li>3x Unblockings / Year</li>
+                                <li>1.5 Hour Labour Included</li>
+                                <li>Free Travel within 20km</li>
+                                <li>1 Free Video Call</li>
+                                <li>Free Same-Day Emergency (Excl. Holidays)</li>
+                                <li>25% Off on Extra Equipment</li>
+                            </ul>
+                            <button class="btn btn-warning w-100 stripe-checkout-btn" onclick="checkout(3799, 'Gold')">
+                                Subscribe Now
+                            </button>
+                            <p class="text-muted"><small>*Extra charges apply if equipment upgrade or pipe replacement
+                                    is needed.</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Discount Info -->
+            <div class="mt-5 text-center" style="background-color: azure;padding: 20px;border: 1px solid #ccc;">
+                <h5>💸 Additional Service Discount (After 3 uses)</h5>
+                <p>Bronze: <strong>15% off</strong> &nbsp; | &nbsp; Silver: <strong>20% off</strong> &nbsp; | &nbsp;
+                    Gold: <strong>25% off</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!--faq section -->
+    <section class="faq-section">
+        <div class="container">
+
+            <div class="accordion mt-5" id="faqAccordion">
+                <h5 class="text-center mb-3">🙋 Frequently Asked Questions</h5>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse1">
+                            What happens if I miss my appointment?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            If no one is present at the scheduled time, it counts as one service used from your 3
+                            unblockings.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse2">
+                            What if my issue isn’t fixed in 15 mins during video call?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We'll do our best to guide you. If the problem persists, we recommend booking an on-site
+                            visit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse3">
+                            Can I upgrade my plan later?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! You can upgrade to a higher tier anytime. We'll pro-rate the remaining period.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section <!-- contact section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side: Google Map -->
+                <div class="col-md-6">
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509167!2d144.95373531531887!3d-37.81627917975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d3f9cb64f43d!2sMelbourne%2C%20Australia!5e0!3m2!1sen!2sin!4v1603277741387!5m2!1sen!2sin"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe> -->
+                    <div id="map" style="width: 100%; height: 560px;"></div>
+                </div>
+
+                <!-- Right Side: Contact Form -->
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h4>Contact Us</h4>
+                        <form action="contact_form.php" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                            <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div id="sticky-contact" class="sticky-contact">
+        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123-456-7890</a>
+        <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a>
+    </div> -->
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-md-4">
+                    <h5><img src="assets/images/logo-symbol.png" class="img-fluid" width="40px"> About Us</h5>
+                    <p>We provide top-notch services to our customers, ensuring quality and satisfaction. Get in touch
+                        to learn more!</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="links" href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a class="links" href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a class="links" href="#" class="text-white text-decoration-none">Services</a></li>
+                        <li><a class="links" href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3 links"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 links"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3 links"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white links"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="footer-contact">
+                        <!-- <h5>Débouchage d'or Inc.</h5> -->
+                        <i class="fas fa-location-dot"></i> <span class="mobile">Montréal & Laval, Canada
+                        </span>
+                        <br />
+                        <i class="fas fa-phone-alt"></i> <span class="mobile">(514) 424-8467</span>
+                        <br />
+                        <i class="fas fa-envelope"></i> <span class="email">debouchangedor@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-contact">
+                <div class="contact-item">
+                    <a href="tel:+1234567890" class="contact-btn"><i class="fas fa-phone"></i></a>
+                    <span class="contact-text">(514) 424-8467</span>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:info@example.com" class="contact-btn"><i class="fas fa-envelope"></i></a>
+                    <span class="contact-text">enquiry@dbdor.com</span>
+                </div>
+                <div class="contact-item">
+                    <a href="https://facebook.com" target="_blank" class="social-btn"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://twitter.com" target="_blank" class="social-btn"><i
+                            class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://instagram.com" target="_blank" class="social-btn"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://linkedin.com" target="_blank" class="social-btn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <hr class="my-3 border-light">
+
+            <div class="text-center copyright">
+                <p class="mb-1">&copy; 2025 <img src="assets/images/logo-symbol.png" class="img-fluid" width="30px">
+                    Débouchage d'Or Inc. All Rights Reserved.</p>
+                <a href="#" class="text-white text-decoration-none me-3">Terms of Use</a>
+                <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <button id="goTopBtn" class="go-top-button">&#8679;</button>
+
+    <!--javascripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="assets/js/site.js"></script>
+
+    <script async src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+</body>
+
+</html>
