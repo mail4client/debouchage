@@ -51,7 +51,7 @@ app.post("/create-checkout-session", async (req, res) => {
     cancel_url: "https://www.extrinnov.com/Debouchage/public/cancel",
   });
 
-  res.json({ url: session.url });  
+  res.json({ url: session.url, id: session.id });  
 });
 
 // Important: use process.env.PORT
