@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const stripe = Stripe('pk_test_51RHi4lSD9MXPIidLtOBZ3iIbFPFT0s0eHxxvCnpu98tR4wyFhM2qehismkoOoKjazC4SUCVyGgxdyWJOuCGvWroJ00WzJe0TnN');
 
 function checkout(amount, plan) {
-  fetch('https://debouchage.onrender.com/create-checkout-session', {
+  fetch('https://debouchagetest.onrender.com/create-checkout-session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ amount, plan })
