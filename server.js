@@ -55,7 +55,7 @@ app.post("/create-checkout-session", async (req, res) => {
 });
 
 // Contact Form Email Endpoint
-app.post('/contact', async (req, res) => {
+app.post('/index', async (req, res) => {
   const { name, email, message, recaptchaToken } = req.body;
 
   if (!recaptchaToken) {
