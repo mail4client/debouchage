@@ -8,7 +8,7 @@ const stripe = require('stripe')('sk_test_51RHi4lSD9MXPIidLGZIyyvbQOmUZc9BWrVNRo
 
 // Middlewares
 app.use(cors({
-  origin: "https://www.extrinnov.com",
+  origin: "https://www.dbdor.com",
   methods: ["GET", "POST"],
 }));
 
